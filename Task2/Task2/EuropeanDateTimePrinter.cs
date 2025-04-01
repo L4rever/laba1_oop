@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,11 @@ namespace laba1.Task2
     {
         public void PrintCurrentDateTime()
         {
-            string formatted = DateTime.Now.ToString("dd.MM.yyyy HH:mm");
-            Console.WriteLine("Европейский стиль: " + formatted);
+            var sb = new StringBuilder();
+            var now = DateTime.Now;
+            string formatted = now.ToString("dd.MM.yyyy HH:mm", CultureInfo.GetCultureInfo("fr-FR"));
+            sb.Append(formatted);
+            Console.WriteLine("Европейский стиль: " + sb.ToString());
         }
     }
 }
