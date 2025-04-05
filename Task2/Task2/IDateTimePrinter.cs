@@ -9,5 +9,9 @@ namespace laba1.Task2
     public interface IDateTimePrinter
     {
         void PrintCurrentDateTime();
+        string GetDecoratorChain() 
+        {
+            return this.GetType().Name;
+        }
     }
 }

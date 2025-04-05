@@ -7,3 +7,4 @@ printer = new RandomSymbolDecorator(printer);
 printer = new BracketDecorator(printer);
 
 printer.PrintCurrentDateTime();
+Console.WriteLine("Цепочка декораторов: " + printer.GetDecoratorChain());

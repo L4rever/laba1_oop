@@ -17,5 +17,10 @@ namespace Task2.Task2
         }
 
         public abstract void PrintCurrentDateTime();
+
+        public virtual string GetDecoratorChain()
+        {
+            return $"{GetType().Name}({_inner.GetDecoratorChain()})";
+        }
     }
 }
